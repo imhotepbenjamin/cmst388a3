@@ -43,6 +43,15 @@ body {
     gap: 5%;
     flex-wrap: wrap;
   }
+  #logo-container{
+    position: absolute;
+    width: 15%;
+    top: 5%;
+    left: 3%;
+  }
+  #logo-container img{
+    width: 100%;
+  }
   #header{
     color: aliceblue;
     align-self: center;
@@ -138,7 +147,7 @@ body {
     color: white;
     font-size: 100%;
     position: absolute;
-    top: 3%;
+    top: 5%;
     right: 3%;
     width: 20%;
     height: 10%;
