@@ -1,3 +1,5 @@
+// JavaScript code outside of any functions
+
 // Countdown timer
 let timer = 600; // 10 minutes in seconds
 const countdownElement = document.getElementById('timer');
@@ -9,6 +11,7 @@ function updateTimer() {
   if (timer === 0) {
     clearInterval(timerInterval);
     alert('Time expired! Please start again.');
+    location.href = location.href; // Redirect to the same page
   } else {
     timer--;
   }
@@ -16,6 +19,7 @@ function updateTimer() {
 
 const timerInterval = setInterval(updateTimer, 1000);
 
+// JavaScript functions
 function calculateTotal() {
   const ticketQuantity = document.getElementById('ticket-quantity').value;
   const totalElement = document.getElementById('total');
@@ -31,7 +35,7 @@ function calculateTotal() {
   }
 
   // Calculate total
-  const total = ticketQuantity * 10; // each ticket costs $10
+  const total = ticketQuantity * 10; // Assuming each ticket costs $10
   totalElement.textContent = `Total: $${total.toFixed(2)}`;
 
   // Add animation class
@@ -72,18 +76,23 @@ function completePurchase() {
 }
 
 function isValidEmail(email) {
+  // Add your email validation logic here
+  // This is a simple example, you might want to use a regular expression or a library for more robust validation
   return /\S+@\S+\.\S+/.test(email);
 }
 
 function highlightField(elementId, isError) {
   const element = document.getElementById(elementId);
   element.style.backgroundColor = isError ? 'mistyrose' : '';
+  // Add more styling or logic as needed
 }
 
 function showError(elementId, errorMessage) {
   highlightField(elementId, true);
+  // Add logic to display error messages here
 }
 
 function hideError(elementId) {
   highlightField(elementId, false);
+  // Add logic to hide error messages here
 }
