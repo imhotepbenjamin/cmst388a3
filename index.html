@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DMWT Alumni Event Registration</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id = "wrapper">
+        <header id = "header">
+            <h1>DMWT Alumni Event Registration</h1>
+        </header>
+    
+        <section id="countdown-container">
+            <div id="countdown">Time Remaining: <span id="timer"></span></div>
+        </section>
+    
+    
+        <section id="tickets-container">
+            <div id="tickets">
+                <label for="ticket-quantity">Number of Tickets (1-3):</label>
+                <input type="number" id="ticket-quantity" min="1" max="3">
+                <button id="calculate-btn" onclick="calculateTotal()">Calculate Total</button>
+              </div>
+        </section>
+    
+        <section id = "contact-info-container">
+            <div id="contact-info" class="hidden">
+                <label for="name">Name:</label>
+                <input type="text" id="name">
+                <br>
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email">
+                <br>
+                <br>
+                <button id="complete-purchase-btn" onclick="completePurchase()">Complete Purchase</button>
+            </div>
+        </section>
+    
+        <section id="total-container">
+            <div id="total"></div>
+        </section>
+    </div>
+  <script src="event_registration.js"></script>
+</body>
+</html>
